@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.15.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.15.2/theme/neo.min.css">
+    <link href="dist/css/index.css" rel="stylesheet">
+  </head>
+  <body>
+    <pre class="javascript">var osData = require('os');</pre>
+    <pre class="javascript">osData;</pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.15.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.15.2/addon/runmode/runmode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.15.2/addon/mode/overlay.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.15.2/mode/javascript/javascript.min.js"></script>
+    <script src="dist/js/index.js"></script>
+    <script>
+      CodeBite.clientKey = 'a56d5e3c5334f4eae417d931ec539b74d37a01cbb7d9a2d6326b81013410b7f0';
+      CodeBite.clientSecret = 'a4016f923f3eaf71fd06c1485f2c10208e7748836b0dec3312697cf9c5385c4a';
+
+      var containerNames = {
+        'ruby': '5530752707d4c38f11ae60c99ee3d854',
+        'php': '9670da93f4e9a4b43446133baa854d03',
+        'javascript': '2db08fd19dbac3e4a8b686fae8b5159e'
+      };
+      var codeBites = Array.from(document.querySelectorAll('pre')).map(function(element) {
+        var containerName = containerNames[element.className];
+
+        return new CodeBite({
+          language: element.className,
+          containerName: containerName,
+          element: element,
+          inContext: true
+        });
+      });
+    </script>
+  </body>
+</html>

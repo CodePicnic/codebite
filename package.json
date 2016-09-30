@@ -1,0 +1,43 @@
+{
+  "name": "codebite",
+  "version": "0.0.1",
+  "description": "Embeddable, runnable, piece of code. Backed by CodePicnic",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha",
+    "build:css": "node_modules/.bin/node-sass sass/index.scss dist/css/index.css",
+    "watch:css": "node_modules/.bin/nodemon -e scss -x \"npm run build:css\"",
+    "build:js": "browserify ./lib/index.js -o dist/js/index.js --debug --verbose",
+    "watch:js": "watchify ./lib/index.js -o dist/js/index.js --debug --verbose",
+    "start": "node_modules/.bin/parallelshell \"npm run watch:js\" \"npm run watch:css\" \"node_modules/.bin/nodemon index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodePicnic/codebite.git"
+  },
+  "keywords": [
+    "code",
+    "embed"
+  ],
+  "author": "Gustavo Leon <gustavo@codepicnic.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodePicnic/codebite/issues"
+  },
+  "homepage": "https://github.com/CodePicnic/codebite#readme",
+  "dependencies": {
+    "ansi_up": "^1.3.0",
+    "codepicnic": "file:../codepicnic-javascript",
+    "framebus": "^2.0.5",
+    "lodash": "^4.13.1",
+    "ws": "^1.1.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "jscs": "^3.0.4",
+    "node-sass": "^3.7.0",
+    "nodemon": "^1.9.2",
+    "onchange": "^2.4.0",
+    "parallelshell": "^2.0.0"
+  }
+}
