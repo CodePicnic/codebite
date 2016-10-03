@@ -35,9 +35,22 @@
     padding: 0 41px;
   }
 
+  .cm-s-neo {
+    .cm-keyword {
+      color: #0baac6;
+    }
+    .cm-variable {
+      color:#5faf57
+    }
+    .cm-property {
+      color: #1db0ca;
+    }
+  } 
+
   .cm-s-neo .CodeMirror-cursor {
     width: 2px;
   }
+
 
   .codebite-bridge {
     border: none;
@@ -52,18 +65,34 @@
     height: 32px;
     line-height: 1;
     border: none;
-    background: #27ae60 url("/icons/play.svg") no-repeat center center;
+    background: #27ae60 url("icons/play.svg") no-repeat 260px center;
     background-size: 24px 24px;
     outline: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100px;
+      height: 100%;
+      background: rgba(95, 175, 87, 0.5);
+      z-index: 1;
+      top: 0;
+      left: 40%;
+      bottom: 0;
+    }
 
-    &.loading {
+    /*&.loading {
       background: #c0c0c0 url("/icons/loading.gif") no-repeat center center;
       background-size: auto 20px;
     }
 
     &[disabled] {
       background-color: #c0c0c0;
-    }
+    }*/
   }
 
   .codebite-result {

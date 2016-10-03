@@ -26,6 +26,12 @@
   .codebite-block textarea.CodeMirror {
     border: none;
     padding: 0 41px; }
+  .codebite-block .cm-s-neo .cm-keyword {
+    color: #0baac6; }
+  .codebite-block .cm-s-neo .cm-variable {
+    color: #5faf57; }
+  .codebite-block .cm-s-neo .cm-property {
+    color: #1db0ca; }
   .codebite-block .cm-s-neo .CodeMirror-cursor {
     width: 2px; }
   .codebite-block .codebite-bridge {
@@ -39,14 +45,32 @@
     height: 32px;
     line-height: 1;
     border: none;
-    background: #27ae60 url("/icons/play.svg") no-repeat center center;
+    background: #27ae60 url("icons/play.svg") no-repeat 260px center;
     background-size: 24px 24px;
-    outline: none; }
-    .codebite-block .codebite-play.loading {
+    outline: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    /*&.loading {
       background: #c0c0c0 url("/icons/loading.gif") no-repeat center center;
-      background-size: auto 20px; }
-    .codebite-block .codebite-play[disabled] {
-      background-color: #c0c0c0; }
+      background-size: auto 20px;
+    }
+
+    &[disabled] {
+      background-color: #c0c0c0;
+    }*/ }
+    .codebite-block .codebite-play:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100px;
+      height: 100%;
+      background: rgba(95, 175, 87, 0.5);
+      z-index: 1;
+      top: 0;
+      left: 40%;
+      bottom: 0; }
   .codebite-block .codebite-result {
     display: none;
     min-height: 32px;
