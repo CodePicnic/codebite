@@ -9,8 +9,8 @@
     <link href="dist/css/index.css" rel="stylesheet">
   </head>
   <body>
-    <pre class="php7">echo 'Hello World';</pre>
-    <pre class="ruby23">food = %w( bread milk orange )
+    <pre class="php">echo 'Hello World';</pre>
+    <pre class="devpad-ruby23">food = %w( bread milk orange )
 
 def deep_copy(obj)
   Marshal.load(Marshal.dump(obj))
@@ -18,7 +18,7 @@ end
 
 print deep_copy(food).map(&:object_id)</pre>
     <pre class="nodejs">process.env</pre>
-    <pre class="ruby23">require 'fiddle'
+    <pre class="devpad-ruby23">require 'fiddle'
 
 str = 'water'.freeze
 
@@ -36,14 +36,16 @@ str.frozen?</pre>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.15.2/mode/php/php.min.js"></script>
     <script src="dist/js/index.js"></script>
     <script>
-      CodeBite.baseURL = 'localhost:3000/repl';
-      CodeBite.clientKey = 'a56d5e3c5334f4eae417d931ec539b74d37a01cbb7d9a2d6326b81013410b7f0';
-      CodeBite.clientSecret = 'a4016f923f3eaf71fd06c1485f2c10208e7748836b0dec3312697cf9c5385c4a';
+      CodeBite.baseURL = 'localhost:3001/repl';
+      CodePicnic.API_HOST = 'https://codeground.xyz/api';
+      CodePicnic.OAUTH_HOST = 'https://codeground.xyz';
+      CodeBite.clientKey = 'a25706047f997ade91fae8c31ec69240b47f64a43a3ac1454bce873337765754';
+      CodeBite.clientSecret = '8fd1fa63cafe6f33ffa24e25eabceb43f35cb86ebc7b3dee317f54fc71dfbfc3';
 
       var containerNames = {
-            'ruby': '5530752707d4c38f11ae60c99ee3d854',
-            'php': '9670da93f4e9a4b43446133baa854d03',
-            'javascript': '2db08fd19dbac3e4a8b686fae8b5159e'
+            'devpad-ruby23': '8fc18fd0dab42bd663064dbf1de1c077',
+            'php': '56a6a7ede7ed64cbcdf0400897841788',
+            'nodejs': '85774fcee8d0f2fd2ac678001d47046e'
           },
           codeBites;
 
