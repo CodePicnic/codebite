@@ -909,7 +909,11 @@ CodeBiteView = React.createClass({
           React.createElement(
             'span',
             { className: 'codebite-clear' },
-            'Clear output'
+            'Clear output',
+            React.createElement(
+              'i',
+              { className: 'icon icon-clear' }
+            )
           )
         )
       )

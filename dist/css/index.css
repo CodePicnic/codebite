@@ -1,5 +1,11 @@
+@font-face {
+  font-family: 'devpad';
+  src: url("icons/devpad.woff2") format("woff2"), url("icons/devpad.woff") format("woff"), url("icons/devpad.ttf") format("truetype"), url("icons/devpad.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
 .codebite-block {
-  font-family: "Source Code Pro";
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 15px;
   width: 100%;
   max-width: 620px;
@@ -7,6 +13,21 @@
   border-radius: 4px;
   overflow: hidden;
   margin: 20px auto; }
+  .codebite-block .icon {
+    font-family: 'devpad';
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none; }
+    .codebite-block .icon.icon-share:before {
+      content: 'S'; }
+    .codebite-block .icon.icon-run:before {
+      content: 'P'; }
+    .codebite-block .icon.icon-clear:before {
+      content: 'B'; }
+    .codebite-block .icon.icon-up:before {
+      content: 'F'; }
+    .codebite-block .icon.icon-down:before {
+      content: 'G'; }
   .codebite-block * {
     box-sizing: border-box; }
   .codebite-block .codebite-status {
@@ -16,7 +37,7 @@
     line-height: 24px;
     color: #7f8c8d; }
   .codebite-block .CodeMirror {
-    font-family: "Source Code Pro";
+    font-family: Monaco, Courier, monospace;
     font-size: 15px;
     width: 100%;
     min-height: 32px;
@@ -46,6 +67,8 @@
     line-height: 1;
     background: #5faf57;
     position: relative; }
+    .codebite-block .codebite-actions button {
+      cursor: pointer; }
   .codebite-block .reset-button, .codebite-block .codebite-play, .codebite-block .codebite-share, .codebite-block .codebite-toggle-results {
     display: block;
     background: none;
@@ -57,12 +80,14 @@
     width: 132px;
     height: 32px;
     margin: 0 auto;
-    font-size: 1.1em;
+    font-size: .9em;
     transition: background 0.3s;
     /*&.loading {
       background: #c0c0c0 url("/icons/loading.gif") no-repeat center center;
       background-size: auto 20px;
     }*/ }
+    .codebite-block .codebite-play .icon {
+      margin-right: 10px; }
     .codebite-block .codebite-play:hover {
       background: #76bb6f; }
     .codebite-block .codebite-play[disabled]:hover {
@@ -73,12 +98,25 @@
     position: absolute;
     top: 0;
     right: 0; }
+    .codebite-block .codebite-share .icon {
+      margin-right: 10px; }
+    .codebite-block .codebite-share:hover {
+      background: #76bb6f; }
   .codebite-block .codebite-toggle-results {
     width: 100px;
     height: 32px;
     position: absolute;
     top: 0;
     left: 0; }
+    .codebite-block .codebite-toggle-results .icon {
+      display: inline-block;
+      transform: translate(0, -2px);
+      margin-right: 10px;
+      font-size: 8px; }
+      .codebite-block .codebite-toggle-results .icon.icon-down {
+        transform: translate(-6px, -1px); }
+    .codebite-block .codebite-toggle-results:hover {
+      background: #76bb6f; }
   .codebite-block .codebite-result {
     display: none;
     min-height: 32px;
@@ -87,24 +125,44 @@
     .codebite-block .codebite-result.visible {
       display: block; }
     .codebite-block .codebite-result dl {
-      margin: 0;
-      padding: 0; }
+      margin: 15px 0;
+      padding: 0;
+      border-bottom: 0px; }
+    .codebite-block .codebite-result dt {
+      margin-bottom: 5px; }
     .codebite-block .codebite-result dd {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       margin-left: 0;
       background: #f0f0f0;
       overflow: auto;
-      padding: 10px;
+      padding: 5px 10px;
       border-radius: 4px; }
       .codebite-block .codebite-result dd:last-child {
         margin-bottom: 0px; }
   .codebite-block .codebite-results-actions {
     overflow: hidden;
     font-size: 11px;
-    font-family: sans-serif;
-    padding: 10px 0;
-    color: #7f8c8d; }
+    padding: 15px 0 0 0;
+    color: #7f8c8d;
+    border-top: 1px solid #f5f5f5; }
   .codebite-block .codebite-clear {
     color: #ff7b7b;
     float: right;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 3px;
+    transition: text-decoration 0.3s; }
+    .codebite-block .codebite-clear .icon {
+      padding: 5px;
+      margin-left: 10px;
+      color: white;
+      background: #ff7b7b;
+      font-size: 7px;
+      display: inline-block;
+      transform: translateY(-2px);
+      transition: border-radius 0.3s;
+      border-radius: 3px; }
+    .codebite-block .codebite-clear:hover {
+      text-decoration: underline; }
+      .codebite-block .codebite-clear:hover .icon {
+        border-radius: 50px; }
