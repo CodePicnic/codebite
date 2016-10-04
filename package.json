@@ -30,6 +30,7 @@
     "codepicnic": "file:../codepicnic-javascript",
     "framebus": "^2.0.5",
     "lodash": "^4.13.1",
+    "ms": "^0.7.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "ws": "^1.1.0"

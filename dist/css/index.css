@@ -62,13 +62,11 @@
     /*&.loading {
       background: #c0c0c0 url("/icons/loading.gif") no-repeat center center;
       background-size: auto 20px;
-    }
-
-    &[disabled] {
-      background-color: #c0c0c0;
     }*/ }
     .codebite-block .codebite-play:hover {
       background: #76bb6f; }
+    .codebite-block .codebite-play[disabled]:hover {
+      background: none; }
   .codebite-block .codebite-share {
     width: 100px;
     height: 32px;
@@ -89,7 +87,8 @@
     .codebite-block .codebite-result.visible {
       display: block; }
     .codebite-block .codebite-result dl {
-      margin: 0; }
+      margin: 0;
+      padding: 0; }
     .codebite-block .codebite-result dd {
       margin-bottom: 20px;
       margin-left: 0;
@@ -99,3 +98,13 @@
       border-radius: 4px; }
       .codebite-block .codebite-result dd:last-child {
         margin-bottom: 0px; }
+  .codebite-block .codebite-results-actions {
+    overflow: hidden;
+    font-size: 11px;
+    font-family: sans-serif;
+    padding: 10px 0;
+    color: #7f8c8d; }
+  .codebite-block .codebite-clear {
+    color: #ff7b7b;
+    float: right;
+    text-transform: uppercase; }

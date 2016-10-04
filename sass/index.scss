@@ -89,13 +89,13 @@
       background: #76bb6f;
     }
 
+    &[disabled]:hover {
+      background: none;
+    }
+
     /*&.loading {
       background: #c0c0c0 url("/icons/loading.gif") no-repeat center center;
       background-size: auto 20px;
-    }
-
-    &[disabled] {
-      background-color: #c0c0c0;
     }*/
   }
 
@@ -129,6 +129,7 @@
 
     dl {
       margin: 0;
+      padding: 0;
     }
 
     dd {
@@ -143,5 +144,19 @@
         margin-bottom: 0px;
       }
     }
+  }
+
+  .codebite-results-actions {
+    overflow: hidden;
+    font-size: 11px;
+    font-family: sans-serif;
+    padding: 10px 0;
+    color: #7f8c8d;
+  }
+
+  .codebite-clear {
+    color: #ff7b7b;
+    float: right;
+    text-transform: uppercase;
   }
 }
