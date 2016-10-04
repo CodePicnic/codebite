@@ -45,7 +45,7 @@
     .cm-property {
       color: #1db0ca;
     }
-  } 
+  }
 
   .cm-s-neo .CodeMirror-cursor {
     width: 2px;
@@ -59,30 +59,34 @@
     display: none;
   }
 
-  .codebite-play {
+  .codebite-actions {
     display: block;
     width: 100%;
     height: 32px;
     line-height: 1;
-    border: none;
-    background: #27ae60 url("icons/play.svg") no-repeat 260px center;
-    background-size: 24px 24px;
-    outline: none;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    color: white;
+    background: #5faf57;
     position: relative;
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 100px;
-      height: 100%;
-      background: rgba(95, 175, 87, 0.5);
-      z-index: 1;
-      top: 0;
-      left: 40%;
-      bottom: 0;
+  }
+
+  .reset-button {
+    display: block;
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  .codebite-play {
+    @extend .reset-button;
+    width: 132px;
+    height: 32px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #76bb6f;
     }
 
     /*&.loading {
@@ -95,10 +99,28 @@
     }*/
   }
 
+  .codebite-share {
+    @extend .reset-button;
+    width: 100px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .codebite-toggle-results {
+    @extend .reset-button;
+    width: 100px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   .codebite-result {
     display: none;
     min-height: 32px;
-    padding: 10px 41px;
+    padding: 10px 22px;
     overflow: auto;
 
     &.visible {

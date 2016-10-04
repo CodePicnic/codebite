@@ -7,9 +7,9 @@
     "test": "node_modules/.bin/mocha",
     "build:css": "node_modules/.bin/node-sass sass/index.scss dist/css/index.css",
     "watch:css": "node_modules/.bin/nodemon -e scss -x \"npm run build:css\"",
-    "build:js": "browserify ./lib/index.js -o dist/js/index.js --debug --verbose",
-    "watch:js": "watchify ./lib/index.js -o dist/js/index.js --debug --verbose",
-    "start": "node_modules/.bin/parallelshell \"npm run watch:js\" \"npm run watch:css\" \"node_modules/.bin/nodemon index.js\""
+    "build:js": "browserify ./lib/index.js -o dist/js/index.js --debug --verbose -t [ babelify --presets [ react ] ]",
+    "watch:js": "watchify ./lib/index.js -o dist/js/index.js --debug --verbose -t [ babelify --presets [ react ] ]",
+    "start": "node_modules/.bin/parallelshell \"npm run watch:js\" \"npm run watch:css\""
   },
   "repository": {
     "type": "git",
@@ -30,9 +30,13 @@
     "codepicnic": "file:../codepicnic-javascript",
     "framebus": "^2.0.5",
     "lodash": "^4.13.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "ws": "^1.1.0"
   },
   "devDependencies": {
+    "babel-preset-react": "^6.16.0",
+    "babelify": "^7.3.0",
     "browserify": "^13.0.1",
     "jscs": "^3.0.4",
     "node-sass": "^3.7.0",
