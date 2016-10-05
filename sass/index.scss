@@ -44,6 +44,14 @@
       content: 'G';
     }
 
+    &.icon-replay:before {
+      content: 'R';
+    }
+
+    &.icon-loading:before {
+      content: 's';
+    }
+
   }
 
   * {
@@ -126,8 +134,18 @@
     font-size: .9em;
     transition: background 0.3s;
 
-    .icon {
+    .icon-run {
       margin-right: 10px;
+    }
+
+    .icon-loading {
+      font-size: 15px;
+      animation: spin 2s infinite linear;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
 
     &:hover {
@@ -257,6 +275,5 @@
       }
 
     }
-
   }
 }

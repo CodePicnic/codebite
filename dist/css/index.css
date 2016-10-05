@@ -28,6 +28,10 @@
       content: 'F'; }
     .codebite-block .icon.icon-down:before {
       content: 'G'; }
+    .codebite-block .icon.icon-replay:before {
+      content: 'R'; }
+    .codebite-block .icon.icon-loading:before {
+      content: 's'; }
   .codebite-block * {
     box-sizing: border-box; }
   .codebite-block .codebite-status {
@@ -86,8 +90,17 @@
       background: #c0c0c0 url("/icons/loading.gif") no-repeat center center;
       background-size: auto 20px;
     }*/ }
-    .codebite-block .codebite-play .icon {
+    .codebite-block .codebite-play .icon-run {
       margin-right: 10px; }
+    .codebite-block .codebite-play .icon-loading {
+      font-size: 15px;
+      animation: spin 2s infinite linear; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
     .codebite-block .codebite-play:hover {
       background: #76bb6f; }
     .codebite-block .codebite-play[disabled]:hover {
