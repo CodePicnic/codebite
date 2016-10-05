@@ -141,7 +141,7 @@
     .icon-loading {
       display: block;
       font-size: 15px;
-      animation: spin 4s linear infinite;
+      animation: codebite-spin 4s linear infinite;
     }
 
     &:hover {
@@ -274,7 +274,7 @@
   }
 }
 
-@keyframes spin { 
+@keyframes codebite-spin { 
   100% { 
     transform: rotate(360deg); 
   }

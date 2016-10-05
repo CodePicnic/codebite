@@ -95,7 +95,7 @@
     .codebite-block .codebite-play .icon-loading {
       display: block;
       font-size: 15px;
-      animation: spin 4s linear infinite; }
+      animation: codebite-spin 4s linear infinite; }
     .codebite-block .codebite-play:hover {
       background: #76bb6f; }
     .codebite-block .codebite-play[disabled]:hover {
@@ -175,6 +175,6 @@
       .codebite-block .codebite-clear:hover .icon {
         border-radius: 50px; }
 
-@keyframes spin {
+@keyframes codebite-spin {
   100% {
     transform: rotate(360deg); } }
