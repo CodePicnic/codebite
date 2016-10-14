@@ -19,7 +19,7 @@
   margin: 20px auto;
 
   .icon {
-    font-family: 'devpad';
+    font-family: 'devpad' !important;
     font-weight: normal;
     font-style: normal;
     text-transform: none;
@@ -274,8 +274,8 @@
   }
 }
 
-@keyframes codebite-spin { 
-  100% { 
-    transform: rotate(360deg); 
+@keyframes codebite-spin {
+  100% {
+    transform: rotate(360deg);
   }
 }

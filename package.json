@@ -9,6 +9,7 @@
     "watch:css": "node_modules/.bin/nodemon -e scss -x \"npm run build:css\"",
     "build:js": "browserify ./lib/index.js -o dist/js/index.js --debug --verbose -t [ babelify --presets [ react ] ]",
     "watch:js": "watchify ./lib/index.js -o dist/js/index.js --debug --verbose -t [ babelify --presets [ react ] ]",
+    "dist:js": "NODE_ENV=production npm run build:js && uglify -s ./dist/js/index.js -o ./dist/js/index.js",
     "start": "node_modules/.bin/parallelshell \"npm run watch:js\" \"npm run watch:css\""
   },
   "repository": {
@@ -43,6 +44,7 @@
     "node-sass": "^3.7.0",
     "nodemon": "^1.9.2",
     "onchange": "^2.4.0",
-    "parallelshell": "^2.0.0"
+    "parallelshell": "^2.0.0",
+    "uglify": "^0.1.5"
   }
 }

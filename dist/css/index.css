@@ -14,7 +14,7 @@
   overflow: hidden;
   margin: 20px auto; }
   .codebite-block .icon {
-    font-family: 'devpad';
+    font-family: 'devpad' !important;
     font-weight: normal;
     font-style: normal;
     text-transform: none; }
