@@ -82,6 +82,10 @@
   }
 
   .cm-s-neo {
+    pre {
+      background: none;
+    }
+
     .cm-keyword {
       color: #0baac6;
     }
@@ -215,10 +219,15 @@
       margin: 15px 0;
       padding: 0;
       border-bottom: 0px;
+
+      &.cm-s-neo.CodeMirror {
+        background: none;
+      }
     }
 
     dt {
-      margin-bottom: 5px;
+      padding: 5px;
+      margin: 0;
     }
 
     dd {

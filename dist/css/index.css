@@ -51,6 +51,8 @@
   .codebite-block textarea.CodeMirror {
     border: none;
     padding: 0 41px; }
+  .codebite-block .cm-s-neo pre {
+    background: none; }
   .codebite-block .cm-s-neo .cm-keyword {
     color: #0baac6; }
   .codebite-block .cm-s-neo .cm-variable {
@@ -137,8 +139,11 @@
       margin: 15px 0;
       padding: 0;
       border-bottom: 0px; }
+      .codebite-block .codebite-result dl.cm-s-neo.CodeMirror {
+        background: none; }
     .codebite-block .codebite-result dt {
-      margin-bottom: 5px; }
+      padding: 5px;
+      margin: 0; }
     .codebite-block .codebite-result dd {
       margin-bottom: 10px;
       margin-left: 0;
