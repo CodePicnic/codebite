@@ -72,7 +72,8 @@
     background: #5faf57;
     position: relative; }
     .codebite-block .codebite-actions button {
-      cursor: pointer; }
+      cursor: pointer;
+      font-size: 11px; }
   .codebite-block .reset-button, .codebite-block .codebite-play, .codebite-block .codebite-share, .codebite-block .codebite-toggle-results {
     display: block;
     background: none;
@@ -172,8 +173,6 @@
       border-radius: 3px; }
     .codebite-block .codebite-clear:hover {
       text-decoration: underline; }
-      .codebite-block .codebite-clear:hover .icon {
-        border-radius: 50px; }
 
 @keyframes codebite-spin {
   100% {
