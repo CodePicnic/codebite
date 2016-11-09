@@ -7,8 +7,8 @@
     "test": "node_modules/.bin/mocha",
     "build:css": "node_modules/.bin/node-sass sass/index.scss dist/css/index.css",
     "watch:css": "node_modules/.bin/nodemon -e scss -x \"npm run build:css\"",
-    "build:js": "browserify ./lib/index.js -o dist/js/index.js --debug --verbose -t [ babelify --presets [ react ] ]",
-    "watch:js": "watchify ./lib/index.js -o dist/js/index.js --debug --verbose -t [ babelify --presets [ react ] ]",
+    "build:js": "browserify ./lib/index.js -o dist/js/index.js --debug --verbose -t [ babelify --presets [ es2015 ] --plugins transform-react-jsx ]",
+    "watch:js": "watchify ./lib/index.js -o dist/js/index.js --debug --verbose -t [ babelify --presets [ es2015 ] --plugins transform-react-jsx ]",
     "dist:js": "NODE_ENV=production npm run build:js && uglify -s ./dist/js/index.js -o ./dist/js/index.js",
     "start": "node_modules/.bin/parallelshell \"npm run watch:js\" \"npm run watch:css\""
   },
@@ -32,11 +32,12 @@
     "framebus": "^2.0.5",
     "lodash": "^4.13.1",
     "ms": "^0.7.1",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "preact": "^6.4.0",
     "ws": "^1.1.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
