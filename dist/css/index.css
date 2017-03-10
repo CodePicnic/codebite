@@ -61,6 +61,8 @@
       color: rgba(0, 0, 0, 0.35) !important; }
       .codebite-block .CodeMirror.shadowed .CodeMirror-line > span span:not(.codebite-highlight) {
         color: rgba(0, 0, 0, 0.35) !important; }
+  .codebite-block pre.CodeMirror-placeholder {
+    color: #999; }
   .codebite-block textarea.CodeMirror {
     border: none;
     padding: 0 41px; }

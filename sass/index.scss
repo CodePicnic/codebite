@@ -85,7 +85,7 @@
     padding: 0 10px;
     border-bottom: solid 1px #ecf0f1;
 
-    &.cm-s-neo .cm-builtin {
+&.cm-s-neo .cm-builtin {
       color: #1d75b3;
     }
 
@@ -110,6 +110,8 @@
       }
     }
   }
+
+  pre.CodeMirror-placeholder { color: #999; }
 
   textarea.CodeMirror {
     border: none;
