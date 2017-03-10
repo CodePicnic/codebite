@@ -35,6 +35,8 @@
       content: 'R'; }
     .codebite-block .icon.icon-loading:before {
       content: 's'; }
+    .codebite-block .icon.icon-mark:before {
+      content: 'A'; }
   .codebite-block * {
     box-sizing: border-box; }
   .codebite-block .codebite-status {
@@ -43,6 +45,8 @@
     font-size: 12px;
     line-height: 24px;
     color: #7f8c8d; }
+  .codebite-block .codebite-status-button {
+    float: right; }
   .codebite-block .CodeMirror {
     font-family: Monaco, Courier, monospace;
     font-size: 15px;
@@ -51,6 +55,12 @@
     height: auto;
     padding: 0 10px;
     border-bottom: solid 1px #ecf0f1; }
+    .codebite-block .CodeMirror.cm-s-neo .cm-builtin {
+      color: #1d75b3; }
+    .codebite-block .CodeMirror.shadowed .CodeMirror-line > span {
+      color: rgba(0, 0, 0, 0.35) !important; }
+      .codebite-block .CodeMirror.shadowed .CodeMirror-line > span span:not(.codebite-highlight) {
+        color: rgba(0, 0, 0, 0.35) !important; }
   .codebite-block textarea.CodeMirror {
     border: none;
     padding: 0 41px; }

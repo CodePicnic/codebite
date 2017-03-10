@@ -55,6 +55,9 @@
       content: 's';
     }
 
+    &.icon-mark:before {
+      content: 'A';
+    }
   }
 
   * {
@@ -69,6 +72,10 @@
     color: #7f8c8d;
   }
 
+  .codebite-status-button {
+    float: right;
+  }
+
   .CodeMirror {
     font-family: Monaco, Courier, monospace;
     font-size: 15px;
@@ -77,6 +84,31 @@
     height: auto;
     padding: 0 10px;
     border-bottom: solid 1px #ecf0f1;
+
+    &.cm-s-neo .cm-builtin {
+      color: #1d75b3;
+    }
+
+    &.shadowed {
+      .CodeMirror-line > span {
+        color: rgba(0, 0, 0, .35) !important;
+
+        span:not(.codebite-highlight) {
+          color: rgba(0, 0, 0, .35) !important;
+          // background: rgba(255, 255, 255, 1);
+          // display: inline-block;
+          // border-bottom: solid 1px #999;
+
+          // &:first-child {
+          //   padding-left: 4px;
+          // }
+
+          // &:last-child {
+          //   border-right: solid 1px #999;
+          // }
+        }
+      }
+    }
   }
 
   textarea.CodeMirror {

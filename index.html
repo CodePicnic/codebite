@@ -8,7 +8,7 @@
     <link href="dist/css/index.css" rel="stylesheet">
   </head>
   <body>
-    <pre class="devpad-go142">// You can edit this code!
+    <pre class="devpad-golang">// You can edit this code!
 // Click here and start typing.
 package main
 
@@ -17,16 +17,16 @@ import "fmt"
 func main() {
   fmt.Println("Hello, 世界")
 }</pre>
-    <pre class="php">echo 'Hello World';</pre>
-    <pre class="devpad-ruby23">food = %w( bread milk orange )
+    <pre class="devpad-php">echo 'Hello World';</pre>
+    <pre class="devpad-ruby">food = %w( bread milk orange )
 
 def deep_copy(obj)
   Marshal.load(Marshal.dump(obj))
 end
 
 print deep_copy(food).map(&:object_id)</pre>
-    <pre class="nodejs">process.env</pre>
-    <pre class="devpad-ruby23">require 'fiddle'
+    <pre class="devpad-nodejs">process.env</pre>
+    <pre class="devpad-ruby">require 'fiddle'
 
 str = 'water'.freeze
 
@@ -52,14 +52,16 @@ str.frozen?</pre>
       CodeBite.clientSecret = '8fd1fa63cafe6f33ffa24e25eabceb43f35cb86ebc7b3dee317f54fc71dfbfc3';
 
       var containerNames = {
-            'devpad-ruby23': '8fc18fd0dab42bd663064dbf1de1c077',
-            'php': '56a6a7ede7ed64cbcdf0400897841788',
-            'nodejs': '85774fcee8d0f2fd2ac678001d47046e'
+            'devpad-ruby': '8fc18fd0dab42bd663064dbf1de1c077',
+            'devpad-php': '56a6a7ede7ed64cbcdf0400897841788',
+            'devpad-nodejs': '85774fcee8d0f2fd2ac678001d47046e'
           },
           codeBites;
 
       codeBites = Array.from(document.querySelectorAll('pre')).map(function(element) {
         var containerName = containerNames[element.className];
+
+        console.log(element.className);
 
         return new CodeBite({
           type: element.className,

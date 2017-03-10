@@ -29,7 +29,6 @@
   "dependencies": {
     "ansi_up": "^1.3.0",
     "codepicnic": "file:../codepicnic-javascript",
-    "framebus": "^2.0.5",
     "lodash": "^4.13.1",
     "ms": "^0.7.1",
     "preact": "^6.4.0",
